@@ -1,12 +1,13 @@
-/*
-Theme Name: Artist
-Theme URI: http://scanwp.net
-Author: Catherine La Fortune
-Author URI: https://x2clickseo.com
-Description: A theme for artist clients
-Version: 1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: SASS, clean, bootstrap, mobile friendly, visual artist, artist
-Text Domain: Artist
-*/
+<?php function artist_enqueue() {
+    wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+    if($_SERVER['SERVER_NAME'] != 'localhost'){
+      wp_enqueue_style('style', get_template_directory_uri() . '/style.min.css');
+    } else{
+      wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
+    }
+    wp_enqueue_script( 'customjs', get_template_directory_uri() . '/assets/js/custom.min.js', array('jquery'), '', true );
+    wp_enqueue_style('Montserrat', "https://fonts.googleapis.com/css?family=Montserrat:700|Montserrat:normal|Montserrat:300");
+    wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css');
+    wp_enqueue_script( 'bootstrapcdn', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'), '', true );
+}
+add_action('wp_enqueue_scripts', 'ScanWP_enqueue');
