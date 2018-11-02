@@ -1,0 +1,12 @@
+/*
+Theme Name: Artist
+Theme URI: http://scanwp.net
+Author: Catherine La Fortune
+Author URI: https://x2clickseo.com
+Description: A theme for artist clients
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: SASS, clean, bootstrap, mobile friendly, visual artist, artist
+Text Domain: Artist
+*/
